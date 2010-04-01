@@ -1,0 +1,5 @@
+- title ||= "naše novinky"
+.feed
+  %a{ :href => "/articles.xml", :title => "Odebírat #{title}", :rel => "nofollow" }
+    Odebírat
+    = title
