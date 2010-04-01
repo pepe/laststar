@@ -135,7 +135,7 @@ describe "article" do
   
   before(:each) do
     stub_configuration
-    @date = "07 September 2009"
+    @date = "01. 04. 2010"
     @keywords = "things, stuff"
     @description = "Page about stuff"
     @summary = 'Multiline\n\nsummary'
@@ -196,7 +196,7 @@ describe "article" do
     end
     
     it "should link to each category" do
-      body.should have_tag("div.categories", /Filed under/)
+      body.should have_tag("div.categories", /Zařazeno v kategoriích/)
       body.should have_tag("div.categories") do |categories|
         categories.should have_tag("a[@href=/banana]", "Banana")
         categories.should have_tag("a[@href=/the-apple]", "Apple")
