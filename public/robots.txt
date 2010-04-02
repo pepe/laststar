@@ -1,2 +1,5 @@
 # robots.txt
 # See http://en.wikipedia.org/wiki/Robots_exclusion_standard
+User-agent: *
+Allow: /
+
