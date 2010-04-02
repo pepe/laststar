@@ -48,4 +48,12 @@ namespace :vlad do
   # in Rakefile).
   desc "Deploy the code and restart the server"
   task :deploy => [:update, :start_app]
+
+  remote_task :start_app, :roles => :app do
+    run "touch #{current_release}/tmp/restart.txt"
+  end
+
+  remote_task :clean_cache, :roles => :app do
+    run "rm #{current_release}/public/*.html"
+  end
 end
