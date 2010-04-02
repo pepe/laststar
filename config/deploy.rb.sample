@@ -47,7 +47,7 @@ namespace :vlad do
   # is the default app server (you can change it in the call to Vlad.load
   # in Rakefile).
   desc "Deploy the code and restart the server"
-  task :deploy => [:update, :start_app]
+  task :deploy => [:update, :clean_cache, :start_app]
 
   remote_task :start_app, :roles => :app do
     run "touch #{current_release}/tmp/restart.txt"
