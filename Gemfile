@@ -8,6 +8,7 @@ gem "sinatra", "0.9.4"
 
 group :development do
   gem "shotgun"
+  gem "ruby-debug"
 end
 
 group :test do
